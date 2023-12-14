@@ -1,5 +1,17 @@
 import random
 
+def welcomeScreen():
+   
+
+    hangmanLogo = """
+     __    __       ___      .__   __.   _______ .___  ___.      ___      .__   __.   
+    |  |  |  |     /   \     |  \ |  |  /  _____||   \/   |     /   \     |  \ |  |    
+    |  |__|  |    /  ^  \    |   \|  | |  |  __  |  \  /  |    /  ^  \    |   \|  |   
+    |   __   |   /  /_\  \   |  . `  | |  | |_ | |  |\/|  |   /  /_\  \   |  . `  |    
+    |  |  |  |  /  _____  \  |  |\   | |  |__| | |  |  |  |  /  _____  \  |  |\   |    
+    |__|  |__| /__/     \__\ |__| \__|  \______| |__|  |__| /__/     \__\ |__| \__|     
+                                                                                     """
+    print(hangmanLogo)
 
 class hangmanGame:
     def __init__(self):
@@ -42,54 +54,54 @@ class hangmanGame:
         Hangman pictures as they progeess depending on answers.
         """
         if self.incorrect_guesses == 0:
-            print("________      ")
-            print("|      |      ")
-            print("|             ")
-            print("|             ")
-            print("|             ")
-            print("|             ")
+            print("  ________      ")
+            print("  |      |      ")
+            print("  |             ")
+            print("  |             ")
+            print("  |             ")
+            print("*_| _*          ")
         elif self.incorrect_guesses == 1:
-            print("________      ")
-            print("|      |      ")
-            print("|      0      ")
-            print("|             ")
-            print("|             ")
-            print("|             ")
+            print("  ________      ")
+            print("  |      |      ")
+            print("  |      0      ")
+            print("  |             ")
+            print("  |             ")
+            print("*_| _*          ")
         elif self.incorrect_guesses == 2:
-            print("________      ")
-            print("|      |      ")
-            print("|      0      ")
-            print("|     /       ")
-            print("|             ")
-            print("|             ")
+            print("  ________      ")
+            print("  |      |      ")
+            print("  |      0      ")
+            print("  |     /       ")
+            print("  |             ")
+            print("*_| _*          ")
         elif self.incorrect_guesses == 3:
-            print("________      ")
-            print("|      |      ")
-            print("|      0      ")
-            print("|     /|      ")
-            print("|             ")
-            print("|             ")
+            print("  ________      ")
+            print("  |      |      ")
+            print("  |      0      ")
+            print("  |     /|      ")
+            print("  |             ")
+            print("*_| _*          ")
         elif self.incorrect_guesses == 4:
-            print("________      ")
-            print("|      |      ")
-            print("|      0      ")
-            print("|     /|\\    ")
-            print("|             ")
-            print("|             ")
+            print("  ________      ")
+            print("  |      |      ")
+            print("  |      0      ")
+            print("  |     /|\\    ")
+            print("  |             ")
+            print("*_| _*          ")
         elif self.incorrect_guesses == 5:
-            print("________      ")
-            print("|      |      ")
-            print("|      0      ")
-            print("|     /|\\    ")
-            print("|     /       ")
-            print("|             ")
+            print("  ________      ")
+            print("  |      |      ")
+            print("  |      0      ")
+            print("  |     /|\\    ")
+            print("  |     /       ")
+            print("*_| _*          ")
         else:
-            print("________      ")
-            print("|      |      ")
-            print("|      0      ")
-            print("|     /|\\    ")
-            print("|     / \\    ")
-            print("|             ")
+            print("  ________      ")
+            print("  |      |      ")
+            print("  |      0      ")
+            print("  |     /|\\    ")
+            print("  |     / \\    ")
+            print("*_| _*          ")
             print("You lose man, do you even know ball?")
 
     def playGame(self):
@@ -133,6 +145,6 @@ class hangmanGame:
             
 
 
-
+welcomeScreen()
 hangmanGame()
 playGame()
