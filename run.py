@@ -71,3 +71,26 @@ def hangman_picture(self):
             print("|     / \     ")
             print("|             ")
             print("YOU LOSE!")
+
+"""Checks what letters have been guessed and displays if correct""" 
+def display_player(self):
+    display = ""
+    for letter in self.hidden_player:
+        if letter in self.guessed_letters:
+             display += letter
+        else:
+            display += "_"
+    return display    
+
+"""Start of Footballers Hangman and allows user to start guessing letters"""
+def playGame(self):
+      print("Welcome to Footballers Hangman, can you guess the footballer I'm thinking of??")
+
+      while self.incorrect_guesses < self.max_attempts:
+            current_display = self.display_player()
+            print(f"Footballer: {current_display}")
+            self.hangman_picture()
+
+            guess = input("Please gess a letter:").lower()
+
+            if len(guess) !=1 or not guess.is alpha():
