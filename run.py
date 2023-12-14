@@ -1,4 +1,5 @@
 import random
+import time
 
 def welcomeScreen():
    
@@ -10,6 +11,8 @@ def welcomeScreen():
     |   __   |   /  /_\  \   |  . `  | |  | |_ | |  |\/|  |   /  /_\  \   |  . `  |    
     |  |  |  |  /  _____  \  |  |\   | |  |__| | |  |  |  |  /  _____  \  |  |\   |    
     |__|  |__| /__/     \__\ |__| \__|  \______| |__|  |__| /__/     \__\ |__| \__|     
+    
+---------------------------------------------------------------------------------------
                                                                                      """
     print(hangmanLogo)
 
@@ -108,8 +111,11 @@ class hangmanGame:
         """
         Start of Footballers Hangman and allows user to start guessing letters.
         """
-        print("Welcome to Footballers Hangman, can you guess the footballer I'm thinking of??")
-
+        welcome = ("Welcome to Footballers Hangman, can you guess the footballer I'm thinking of??")
+        for char in welcome:
+            print(char, end='', flush=True)
+            time.sleep(.05)
+      
         while self.incorrect_guesses < self.max_guesses:
             current_display = self.display_player()
             print(f"\nFootballer: {current_display}")
@@ -124,8 +130,8 @@ class hangmanGame:
             if guess in self.guessed_letters:
                 print("You have already tried that letter, try another.")
                 continue
-
             self.guessed_letters.append(guess)
+
 
             if guess not in self.hidden_player:
                 self.incorrect_guesses += 1
