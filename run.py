@@ -1,27 +1,47 @@
 import random
 
-"""Initialise the game class."""
+
 class hangmanGame:
-    def _init_(self):
-        self.reset()
+    def __init__(self):
+        """
+        Initialise the game class.
+        """
+        self.restart()
 
+    def restart(self):
+        """
+        Resets all game states.
+        """
+        self.hidden_player = self.chosen_player()
+        self.guessed_letters = []
+        self.incorrect_guesses = 0
+        self.max_guesses = 6
+        self.playGame()
 
-"""Resets all game states."""
-def reset(self):
-    self.hidden_player = self.chosen_player()
-    self.guessed_letters = []
-    self.incorrect_guesses = 0
-    self.max_attempts = 6
-    self.playGame()
-
-"""Chooses a random footballer from the list for the user to guess"""
-def chosen_player(self):
+    def chosen_player(self):
+        """
+        Chooses a random footballer from the list for the user to guess.
+        """
         footballers = [' messi', 'ronaldo', 'kane', 'haaland', 'mbappe', 'lewandowski', 'bellingham', 'neymar', 'son', 'foden', 'kroos', 'benzema', 'modric', 'salah', 'rashford', 'neuer', 'rooney', 'gerrard', 'lampard','maradona']
         return random.choice(footballers)
 
-"""Hangman pictures"""
-def hangman_picture(self):
-     if self.incorrect_guesses == 0:
+    def display_player(self):
+        """
+        Checks what letters have been guessed and displays if correct.
+        """
+        display = ""
+        for letter in self.hidden_player:
+            if letter in self.guessed_letters:
+                display += letter
+            else:
+                display += "_"
+        return display
+
+    def hangman_picture(self):
+        """
+        Hangman pictures as they progeess depending on answers.
+        """
+        if self.incorrect_guesses == 0:
             print("________      ")
             print("|      |      ")
             print("|             ")
@@ -53,48 +73,40 @@ def hangman_picture(self):
             print("________      ")
             print("|      |      ")
             print("|      0      ")
-            print("|     /|\     ")
+            print("|     /|\\    ")
             print("|             ")
             print("|             ")
         elif self.incorrect_guesses == 5:
             print("________      ")
             print("|      |      ")
             print("|      0      ")
-            print("|     /|\     ")
+            print("|     /|\\    ")
             print("|     /       ")
             print("|             ")
         else:
             print("________      ")
             print("|      |      ")
             print("|      0      ")
-            print("|     /|\     ")
-            print("|     / \     ")
+            print("|     /|\\    ")
+            print("|     / \\    ")
             print("|             ")
-            print("YOU LOSE!")
+            print("You lose man, do you even know ball?")
 
-"""Checks what letters have been guessed and displays if correct""" 
-def display_player(self):
-    display = ""
-    for letter in self.hidden_player:
-        if letter in self.guessed_letters:
-             display += letter
-        else:
-            display += "_"
-    return display    
+    def playGame(self):
+        """
+        Start of Footballers Hangman and allows user to start guessing letters.
+        """
+        print("Welcome to Footballers Hangman, can you guess the footballer I'm thinking of??")
 
-"""Start of Footballers Hangman and allows user to start guessing letters"""
-def playGame(self):
-      print("Welcome to Footballers Hangman, can you guess the footballer I'm thinking of??")
-
-      while self.incorrect_guesses < self.max_attempts:
+        while self.incorrect_guesses < self.max_guesses:
             current_display = self.display_player()
-            print(f"Footballer: {current_display}")
+            print(f"\nFootballer: {current_display}")
             self.hangman_picture()
 
-            guess = input("Please gess a letter:").lower()
+            guess = input("Please guess a letter:").lower()
 
-            if len(guess) !=1 or not guess.is alpha():
-                print("Please enter a valid letter")
+            if len(guess) != 1 or not guess.isalpha():
+                print("Please enter a valid letter (A single lowercase leter).")
                 continue
 
             if guess in self.guessed_letters:
@@ -104,21 +116,23 @@ def playGame(self):
             self.guessed_letters.append(guess)
 
             if guess not in self.hidden_player:
-                  self.incorrect_guesses +=1
-                  print(f"Unlucky thats not one of the letters! You have {self.max_attempts - self.incorrect_guesses} guesses left!")
+                self.incorrect_guesses += 1
+                print(f"Unlucky thats not one of the letters! You have {self.max_guesses - self.incorrect_guesses} guesses left!")
             else:
-                  print(f"Well done! You guessed {self.hidden_player} or did you just read my mind?!")
-                  self.reset()
-                  break
-            
-        if self.incorrect_guesses == self.max_attempts:
+                print("Thats correct, keep going!")
+
+            if all(letter in self.guessed_letters
+                   for letter in self.hidden_player):
+                print(f"Well done! You guessed {self.hidden_player} or did you just read my mind?!")
+                self.reset()
+                break
+
+        if self.incorrect_guesses == self.max_guesses:
             self.hangman_picture()
             print(f"Ahh unlucky, you have run out of guesses! The player I was thinking of was {self.hidden_player}. Better luck next time!")
+            
 
-"""Function to hold functions"""
-def main():
-      hangmanGame()
-      playGame()
 
-"""Starts game"""
-main()      
+
+hangmanGame()
+playGame()
