@@ -94,3 +94,23 @@ def playGame(self):
             guess = input("Please gess a letter:").lower()
 
             if len(guess) !=1 or not guess.is alpha():
+                print("Please enter a valid letter")
+                continue
+
+            if guess in self.guessed_letters:
+                print("You have already tried that letter, try another.")
+                continue
+
+            self.guessed_letters.append(guess)
+
+            if guess not in self.hidden_player:
+                  self.incorrect_guesses +=1
+                  print(f"Unlucky thats not one of the letters! You have {self.max_attempts - self.incorrect_guesses} guesses left!")
+            else:
+                  print(f"Well done! You guessed {self.hidden_player} or did you just read my mind?!")
+                  self.reset()
+                  break
+            
+        if self.incorrect_guesses == self.max_attempts:
+            self.hangman_picture()
+            print(f"Ahh unlucky, you have run out of guesses! The player I was thinking of was {self.hidden_player}. Better luck next time!")
