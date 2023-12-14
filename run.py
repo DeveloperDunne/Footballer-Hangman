@@ -5,14 +5,14 @@ def welcomeScreen():
    
 
     hangmanLogo = """
-     __    __       ___      .__   __.   _______ .___  ___.      ___      .__   __.   
-    |  |  |  |     /   \     |  \ |  |  /  _____||   \/   |     /   \     |  \ |  |    
-    |  |__|  |    /  ^  \    |   \|  | |  |  __  |  \  /  |    /  ^  \    |   \|  |   
-    |   __   |   /  /_\  \   |  . `  | |  | |_ | |  |\/|  |   /  /_\  \   |  . `  |    
-    |  |  |  |  /  _____  \  |  |\   | |  |__| | |  |  |  |  /  _____  \  |  |\   |    
-    |__|  |__| /__/     \__\ |__| \__|  \______| |__|  |__| /__/     \__\ |__| \__|     
+     _    _       ___      .__   __.    ______ .___  ___.      ___       _   _   
+    | |  | |     /   \     |  \ |  |  /  _____||   \/   |     /   \     | \ | |    
+    | |__| |    /  ^  \    |   \|  | |  |  __  |  \  /  |    /  ^  \    |  \| |   
+    |  __  |   /  /_\  \   |  . `  | |  | |_ | |  |\/|  |   /  /_\  \   | . ` |    
+    | |  | |  /  _____  \  |  |\   | |  |__| | |  |  |  |  /  _____  \  | |\  |    
+    |_|  |_| /__/     \__\ |__| \__|  \______| |__|  |__| /__/     \__\ |_| \_|     
     
----------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
                                                                                      """
     print(hangmanLogo)
 
@@ -105,13 +105,13 @@ class hangmanGame:
             print("  |     /|\\    ")
             print("  |     / \\    ")
             print("*_| _*          ")
-            print("You lose man, do you even know ball?")
+            
 
     def playGame(self):
         """
         Start of Footballers Hangman and allows user to start guessing letters.
         """
-        welcome = ("Welcome to Footballers Hangman, can you guess the footballer I'm thinking of??")
+        welcome = ("Welcome to Footballers Hangman, can you guess the footballer I'm thinking of?")
         for char in welcome:
             print(char, end='', flush=True)
             time.sleep(.05)
@@ -142,15 +142,30 @@ class hangmanGame:
             if all(letter in self.guessed_letters
                    for letter in self.hidden_player):
                 print(f"Well done! You guessed {self.hidden_player} or did you just read my mind?!")
-                self.reset()
+                self.restart()
                 break
 
         if self.incorrect_guesses == self.max_guesses:
             self.hangman_picture()
-            print(f"Ahh unlucky, you have run out of guesses! The player I was thinking of was {self.hidden_player}. Better luck next time!")
+            print(f"Ahh unlucky mate, you have run out of guesses!\nThe player I was thinking of was {self.hidden_player}. Better luck next time!")
+            again()
+
             
+def again():
+    if input(str("Do you want to play again? (y/n):")) == 'y': 
+        main() 
+    elif input == 'n':
+        print("No worries, thanks for playing!")
+        exit()    
+    else:
+        print("Please enter Y or N")
+        again()
+        
 
 
-welcomeScreen()
-hangmanGame()
-playGame()
+def main():
+    welcomeScreen()
+    play_the_game = hangmanGame()
+    play_the_game.playGame()
+
+main()
