@@ -152,11 +152,13 @@ class hangmanGame:
 
             
 def again():
-    if input(str("Do you want to play again? (y/n):")) == 'y': 
+
+    answer = input(str("Do you want to play again? (y/n):"))
+    if answer == 'y':
         main() 
-    elif input == 'n':
+    elif answer== 'n':
         print("No worries, thanks for playing!")
-        exit()    
+        quit()
     else:
         print("Please enter Y or N")
         again()
