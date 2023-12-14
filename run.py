@@ -114,3 +114,11 @@ def playGame(self):
         if self.incorrect_guesses == self.max_attempts:
             self.hangman_picture()
             print(f"Ahh unlucky, you have run out of guesses! The player I was thinking of was {self.hidden_player}. Better luck next time!")
+
+"""Function to hold functions"""
+def main():
+      hangmanGame()
+      playGame()
+
+"""Starts game"""
+main()      
