@@ -14,4 +14,7 @@ def reset(self):
     self.max_attempts = 6
     self.playGame()
 
-    
+"""Chooses a random footballer from the list for the user to guess"""
+def chosen_player(self):
+        footballers = [' messi', 'ronaldo', 'kane', 'haaland', 'mbappe', 'lewandowski', 'bellingham', 'neymar', 'son', 'foden', 'kroos', 'benzema', 'modric', 'salah', 'rashford', 'neuer', 'rooney', 'gerrard', 'lampard','maradona']
+        return random.choice(footballers)
