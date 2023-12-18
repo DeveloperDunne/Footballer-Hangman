@@ -10,7 +10,7 @@ Will you succeed in guessing before your guesses run out or will you be dangling
 
 ![Responsivness](./readme-images/responsive.webp)
 
-How to play:
+## How to play:
 
 Here your knowledge will be tested on famous footballers.
 
@@ -90,6 +90,7 @@ Please see the live site here: [Footballers Hangman](https://footballers-hangman
 
 ### Future Features:
 - I would have liked to have implemented an enter name function where your score could then be stored on a leaderboard at the end of the game but ran out of time.
+- I would have liked to make the game more colourful.
 
 ## 4. Technologies Used:
 
