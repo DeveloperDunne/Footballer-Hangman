@@ -29,7 +29,7 @@ A random footballer will be generated for you to guess. As with the classic hang
 <br>
 
 ## 1. Live Game:
-Please see the live version here: Footballers Hangman. (https://footballers-hangman-cf411def0ec1.herokuapp.com/)
+Please see the live site here: [Footballers Hangman](https://footballers-hangman-cf411def0ec1.herokuapp.com/)
 
 ## 2. Goals:
 
