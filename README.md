@@ -82,3 +82,35 @@ Please see the live version here: Footballers Hangman. (https://footballers-hang
 ### Future Features:
 - I would have liked to have implemented an enter name function where your score could then be stored on a leaderboard at the end of the game but ran out of time.
 
+## 4. Technologies Used:
+
+### Languages:
+
+- Python
+
+This game was created using the Python Language.
+
+<br>
+
+## 5. Testing:
+
+### Manual:
+
+|Game Testing|Yes/No|
+|---|:---:|
+|Lets you know when correct and enters letter in the correct location within the word|✓|
+|Lets you know when incorrect and notifies you how many guesses remain✓|
+|Hangman picture updates if wrong|✓|
+|If answer is not a letter or singular letter asks again for valid input|✓|
+|If guesses run out, game shows correct answer|✓|
+|Asks you to play again when game is complete|✓|
+---
+
+### 5. Testing programmes run:
+
+
+#### CI Python Linter:
+
+- Code was put through CI Python Linter with no issues reported.
+
+ <br>
