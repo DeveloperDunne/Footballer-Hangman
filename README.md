@@ -1,13 +1,14 @@
 # Footballers Hangman
-<br>
+
 Welcome to Footballers Hangman!
+
 <br>
 
 Footballers hangman is a python terminal game which runs through Heroku and is based on the classic game, Hangman.
 
 Will you succeed in guessing before your guesses run out or will you be dangling from above.
 
-![Responsivness](./readme-images/spc-responsive.webp)
+![Responsivness](./readme-images/responsive.webp)
 
 How to play:
 
@@ -65,19 +66,27 @@ Please see the live version here: Footballers Hangman. (https://footballers-hang
 
 - Once you enter a letter the game will tell you if you are right or wrong. If you enter a number or more than one letter you will get a message asking you to input the correct data.
 
-![Choosing an answer](./readme-images/choose.webp)
+![Choosing an answer](./readme-images/invalid-answer.webp)
 
 ### The correct answer:
 
-- If correct you will be advised you are right and all blank spaces in which that letter is correct will fill in to give you a better idea of who the footballer may be.
+- If correct you will be advised you are right and all blank spaces in which that letter is correct will fill in to give you a better idea of who the footballer may be. You will then be asked to choose another letter.
 
 ![Correct answer](./readme-images/correct-answer.webp)
 
 ### The wrong answer:
 
-- However, if you enter a letter which is not one of the chosen fottballer you will be told you are wrong and shown how many guesses you have left.
+- However, if you enter a letter which is not one of the chosen footballer you will be told you are wrong and shown how many guesses you have left. 
+- The hangman picture will update with each wrong answer.
+- If you run out of guesses it will show you the correct answer and ask if you wish to play again.
 
 ![Wrong answer](./readme-images/incorrect-answer.webp)
+
+### End of game:
+
+- If you guess all the correct letters before your guesses run out the game will congratualate you and ask if ou want to play again.
+
+![End game](./readme-images/end-game.png)
 
 ### Future Features:
 - I would have liked to have implemented an enter name function where your score could then be stored on a leaderboard at the end of the game but ran out of time.
