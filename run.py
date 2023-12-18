@@ -1,22 +1,24 @@
 import random
 import time
 
+
 def welcomeScreen():
-   
 
     hangmanLogo = """
-     _    _       ___      .__   __.    ______ .___  ___.      ___       _   _   
-    | |  | |     /   \     |  \ |  |  /  _____||   \/   |     /   \     | \ | |    
-    | |__| |    /  ^  \    |   \|  | |  |  __  |  \  /  |    /  ^  \    |  \| |   
-    |  __  |   /  /_\  \   |  . `  | |  | |_ | |  |\/|  |   /  /_\  \   | . ` |    
-    | |  | |  /  _____  \  |  |\   | |  |__| | |  |  |  |  /  _____  \  | |\  |    
-    |_|  |_| /__/     \__\ |__| \__|  \______| |__|  |__| /__/     \__\ |_| \_|     
-    
---------------------------------------------------------------------------------------
-                                                                                     """
+
+| |  | |                                         | |
+| |__| | __ _ _ __   __ _ _ __ ___   __ _ _ __   | |
+|  __  |/ _` | '_ \\ / _` | '_ ` _ \\ / _` | '_ \\  | |
+| |  | | (_| | | | | (_| | | | | | | (_| | | | | |_|
+|_|  |_|\\__,_|_| |_|\\__, |_| |_| |_|\\__,_|_| |_| (_)
+                     __/ |
+                    |___/
+ """
     print(hangmanLogo)
 
+
 class hangmanGame:
+
     def __init__(self):
         """
         Initialise the game class.
@@ -37,7 +39,10 @@ class hangmanGame:
         """
         Chooses a random footballer from the list for the user to guess.
         """
-        footballers = [' messi', 'ronaldo', 'kane', 'haaland', 'mbappe', 'lewandowski', 'bellingham', 'neymar', 'son', 'foden', 'kroos', 'benzema', 'modric', 'salah', 'rashford', 'neuer', 'rooney', 'gerrard', 'lampard','maradona']
+        footballers = ['messi', 'ronaldo', 'kane', 'haaland', 'mbappe',
+                       'lewandowski', 'bellingham', 'neymar', 'son', 'foden',
+                       'kroos', 'benzema', 'modric', 'salah', 'rashford',
+                       'neuer', 'rooney', 'gerrard', 'lampard', 'maradona']
         return random.choice(footballers)
 
     def display_player(self):
@@ -105,43 +110,38 @@ class hangmanGame:
             print("  |     /|\\    ")
             print("  |     / \\    ")
             print("*_| _*          ")
-            
 
     def playGame(self):
         """
         Start of Footballers Hangman and allows user to start guessing letters.
         """
+
         welcome = ("Welcome to Footballers Hangman, can you guess the footballer I'm thinking of?")
+
         for char in welcome:
             print(char, end='', flush=True)
             time.sleep(.05)
-      
         while self.incorrect_guesses < self.max_guesses:
             current_display = self.display_player()
             print(f"\nFootballer: {current_display}")
             self.hangman_picture()
-
             guess = input("Please guess a letter:").lower()
-
             if len(guess) != 1 or not guess.isalpha():
                 print("Please enter a valid letter (A single lowercase leter).")
                 continue
-
             if guess in self.guessed_letters:
                 print("You have already tried that letter, try another.")
                 continue
             self.guessed_letters.append(guess)
-
-
             if guess not in self.hidden_player:
                 self.incorrect_guesses += 1
-                print(f"Unlucky thats not one of the letters! You have {self.max_guesses - self.incorrect_guesses} guesses left!")
+                print(f"Unlucky thats not one of the letters! You have {self.max_guesses - self.    incorrect_guesses}guesses left!")
             else:
                 print("Thats correct!")
 
             if all(letter in self.guessed_letters
-                   for letter in self.hidden_player):
-                print(f"Well done! You guessed the player {self.hidden_player}. And what a player ay!")
+                    for letter in self.hidden_player):
+                print(f"Well done! You guessed the player {self.hidden_player}.And what a player ay!")
                 again()
                 break
 
@@ -150,24 +150,23 @@ class hangmanGame:
             print(f"Ahh unlucky mate, you have run out of guesses!\nThe player I was thinking of was {self.hidden_player}. Better luck next time!")
             again()
 
-            
-def again():
 
+def again():
     answer = input(str("Do you want to play again? (y/n):"))
     if answer == 'y':
-        main() 
-    elif answer== 'n':
+        main()
+    elif answer == 'n':
         print("No worries, thanks for playing!")
         quit()
     else:
         print("Please enter Y or N")
         again()
-        
 
 
 def main():
     welcomeScreen()
     play_the_game = hangmanGame()
     play_the_game.playGame()
+
 
 main()
