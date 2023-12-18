@@ -114,3 +114,40 @@ This game was created using the Python Language.
 - Code was put through CI Python Linter with no issues reported.
 
  <br>
+  ### Bugs solved:
+
+
+
+### Unfixed Bugs:
+
+
+
+ <br>
+
+ ### Heroku Deployment
+
+* This site was deployed by completing the following steps:
+
+1. Log in to Heroku or create an account.
+2. On the main page click Create New App.
+3. Select your region.
+4. Click on the Create App button
+5. The next page is the project’s Deploy Tab, click the Settings Tab.
+6. Next, scroll down to the Build pack section and click ‘Add Build pack’ select Python and click Save Changes
+7. Add Node.JS after adding Python. (Please be aware: Python must be above Node.JS in that order).
+8. Go to the Deploy tab.
+9. Select Github as your deployment method.
+10. Connect to GitHub.
+11. Search your repository name and connect.
+12. Click either Enable Automatic Deploys for automatic deployment when you push updates to GitHub or maunal to do this manually.
+
+### Cloning:
+
+- Go to the repository on GitHub.
+- Click on the Code button and copy the https URL under Clone
+- Open a terminal.
+- Go to the folder you want to store the cloned repository.
+- In the terminal type git clone and paste the URL of the cloned repository after it then press Enter.
+- The site will then be cloned to that directory.
+
+<br>
