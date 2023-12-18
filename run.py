@@ -135,13 +135,13 @@ class hangmanGame:
             self.guessed_letters.append(guess)
             if guess not in self.hidden_player:
                 self.incorrect_guesses += 1
-                print(f"Unlucky thats not one of the letters! You have {self.max_guesses - self.    incorrect_guesses}guesses left!")
+                print(f"Unlucky thats not one of the letters! You have {self.max_guesses - self.incorrect_guesses} guesses left!")
             else:
                 print("Thats correct!")
 
             if all(letter in self.guessed_letters
                     for letter in self.hidden_player):
-                print(f"Well done! You guessed the player {self.hidden_player}.And what a player ay!")
+                print(f"Well done! You guessed the player {self.hidden_player}. And what a player ay!")
                 again()
                 break
 
