@@ -42,7 +42,7 @@ Please see the live version here: Footballers Hangman. (https://footballers-hang
 - As a user I would like to be able to play the game in the command line.
 - As a user I would like ot see when I guess correctly.
 - As a user I would like to see how many guesses I have left if I guess wrong.
-- As a user I would like to see the answer if I dont get it in time.
+- As a user I would like to see the answer if I run out of guesses.
 - As a user I would like to be asked to play again at the end of the game.
 
 
@@ -114,7 +114,8 @@ This game was created using the Python Language.
 - Code was put through CI Python Linter with no issues reported.
 
  <br>
-  ### Bugs solved:
+
+### Bugs solved:
 
 
 
@@ -123,6 +124,8 @@ This game was created using the Python Language.
 
 
  <br>
+
+ ## 6 Deployment:
 
  ### Heroku Deployment
 
@@ -151,3 +154,11 @@ This game was created using the Python Language.
 - The site will then be cloned to that directory.
 
 <br>
+
+## 8. Acknowledgements and Credits:
+
+- Some of the code layout concepts were used from Code Institutes ‘Love Sandwiches’ project.
+- The big Hangman design font on welcome screen was taken from a thread on Stack Overflow.
+- The layout of some code and how to make the hangman pictures were taken from Youtube.
+- I used method on how to make the text type itself out instead of just print from Stack overflow.   
+- I would like to thank the Slack community and my mentor, Medale Oluwafemi for their guidance and support throughout the project.
