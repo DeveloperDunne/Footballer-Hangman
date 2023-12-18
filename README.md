@@ -30,3 +30,20 @@ A random footballer will be generated for you to guess. As with the classic hang
 ## 1. Live Game:
 Please see the live version here: Footballers Hangman. (https://footballers-hangman-cf411def0ec1.herokuapp.com/)
 
+## 1. Goals:
+
+### Developer Goals:
+
+- I would like the game to be fun but testing.
+- I wanted the game to be easy to use and navigate through.
+
+### User stories /Goals:
+
+- As a user I would like to be able to play the game in the command line.
+- As a user I would like ot see when I guess correctly.
+- As a user I would like to see how many guesses I have left if I guess wrong.
+- As a user I would like to see the answer if I dont get it in time.
+- As a user I would like to be asked to play again at the end of the game.
+
+
+<br>
