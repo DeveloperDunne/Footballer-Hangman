@@ -18,19 +18,19 @@ A random footballer will be generated for you to guess. As with the classic hang
 # Table of contents
 
 - [1. Live Game](#1-live-game)
-- [2. Goald](#2-goals)
-- [3. Features](#4-features)
-- [4. Technologies Used](#5-technologies-used)
-- [5. Testing](#6-testing)
-- [6. Deployment](#7-deployment)
-- [7. Acknowledgements and Credits](#8-acknowledgements-and-credits)
+- [2. Goals](#2-goals)
+- [3. Features](#3-features)
+- [4. Technologies Used](#4-technologies-used)
+- [5. Testing](#5-testing)
+- [6. Deployment](#6-deployment)
+- [7. Acknowledgements and Credits](#7-acknowledgements-and-credits)
 
 <br>
 
 ## 1. Live Game:
 Please see the live version here: Footballers Hangman. (https://footballers-hangman-cf411def0ec1.herokuapp.com/)
 
-## 1. Goals:
+## 2. Goals:
 
 ### Developer Goals:
 
@@ -47,3 +47,38 @@ Please see the live version here: Footballers Hangman. (https://footballers-hang
 
 
 <br>
+
+## 3. Features:
+
+### The Welcome Screen:
+
+- When you run the game you will have a welcome screen loaded which shows the game and rules.
+
+![Welcome Screen](./readme-images/welcome-screen.webp)
+
+
+### Random Footballer
+
+- The game will choose a random footballer for you to try and guess. Each time you play there should be a different footballer chosen from within 20 footballers.
+
+### Choosing an answer / invalid answer:
+
+- Once you enter a letter the game will tell you if you are right or wrong. If you enter a number or more than one letter you will get a message asking you to input the correct data.
+
+![Choosing an answer](./readme-images/choose.webp)
+
+### The correct answer:
+
+- If correct you will be advised you are right and all blank spaces in which that letter is correct will fill in to give you a better idea of who the footballer may be.
+
+![Correct answer](./readme-images/correct-answer.webp)
+
+### The wrong answer:
+
+- However, if you enter a letter which is not one of the chosen fottballer you will be told you are wrong and shown how many guesses you have left.
+
+![Wrong answer](./readme-images/incorrect-answer.webp)
+
+### Future Features:
+- I would have liked to have implemented an enter name function where your score could then be stored on a leaderboard at the end of the game but ran out of time.
+
