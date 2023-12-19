@@ -117,8 +117,10 @@ class hangmanGame:
         """
 
         welcome = ("Welcome to Footballers Hangman!"
-                   " \nEnter a letter and try to guess the footballer before you run out of guesses!"
-                   " \nYou have 6 tries to guess the footballer, do you think you can do it?")
+                   " \nEnter a letter and try to guess the footballer "
+                   "before you run out of guesses!"
+                   " \nYou have 6 tries to guess the footballer,"
+                   "do you think you can do it?")
 
         for char in welcome:
             print(char, end='', flush=True)
@@ -129,7 +131,7 @@ class hangmanGame:
             self.hangman_picture()
             guess = input("Please guess a letter:").lower()
             if len(guess) != 1 or not guess.isalpha():
-                print("Please enter a valid letter (A single lowercase letter)")
+                print("Enter a valid letter (A single lowercase letter)")
                 continue
             if guess in self.guessed_letters:
                 print("You have already tried that letter, try another.")
@@ -137,8 +139,8 @@ class hangmanGame:
             self.guessed_letters.append(guess)
             if guess not in self.hidden_player:
                 self.incorrect_guesses += 1
-                print(f"Unlucky thats not one of the letters!"
-                      f"You have {self.max_guesses - self.incorrect_guesses} "
+                print(f"Unlucky thats not one of the letters! "
+                      f"You have {self.max_guesses - self.incorrect_guesses}"
                       f" guesses left!")
             else:
                 print("Thats correct!")
@@ -153,7 +155,7 @@ class hangmanGame:
         if self.incorrect_guesses == self.max_guesses:
             self.hangman_picture()
             print(f"Ahh unlucky mate, you have run out of guesses!"
-                  f"The player I was thinking of was {self.hidden_player}."
+                  f"The player I was thinking of was... {self.hidden_player}. "
                   f"Better luck next time!")
             again()
 
