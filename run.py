@@ -116,8 +116,9 @@ class hangmanGame:
         Start of Footballers Hangman and allows user to start guessing letters.
         """
 
-        welcome = ("Welcome to Footballers Hangman,"
-                   "can you guess the footballer I'm thinking of?")
+        welcome = ("Welcome to Footballers Hangman!"
+                   " \nEnter a letter below and try to guess the footballer before you run out of guesses!"
+                   " \nYou have 6 tries to guess the footballer I'm thinking of, do you think you can do it?")
 
         for char in welcome:
             print(char, end='', flush=True)
