@@ -53,9 +53,16 @@ Please see the live site here: [Footballers Hangman](https://footballers-hangman
 
 ### The Welcome Screen:
 
-- When you run the game you will have a welcome screen loaded which shows the game and rules.
+- When you run the game you will have a welcome screen loaded which then asks you for your name.
 
 ![Welcome Screen](./readme-images/welcome-screen.webp)
+
+
+### Rules:
+
+- The game will then feel personalised to you and you will be told the rules on how to play.
+
+![Rules](./readme-images/rules.webp)
 
 
 ### Random Footballer
