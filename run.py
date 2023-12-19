@@ -116,7 +116,8 @@ class hangmanGame:
         Start of Footballers Hangman and allows user to start guessing letters.
         """
 
-        welcome = ("Welcome to Footballers Hangman, can you guess the footballer I'm thinking of?")
+        welcome = ("Welcome to Footballers Hangman,"
+                   "can you guess the footballer I'm thinking of?")
 
         for char in welcome:
             print(char, end='', flush=True)
@@ -127,7 +128,7 @@ class hangmanGame:
             self.hangman_picture()
             guess = input("Please guess a letter:").lower()
             if len(guess) != 1 or not guess.isalpha():
-                print("Please enter a valid letter (A single lowercase leter).")
+                print("Please enter a valid letter (A single lowercase leter)")
                 continue
             if guess in self.guessed_letters:
                 print("You have already tried that letter, try another.")
@@ -135,19 +136,24 @@ class hangmanGame:
             self.guessed_letters.append(guess)
             if guess not in self.hidden_player:
                 self.incorrect_guesses += 1
-                print(f"Unlucky thats not one of the letters! You have {self.max_guesses - self.incorrect_guesses} guesses left!")
+                print(f"Unlucky thats not one of the letters!"
+                      f"You have {self.max_guesses - self.incorrect_guesses} "
+                      f"guesses left!")
             else:
                 print("Thats correct!")
 
             if all(letter in self.guessed_letters
                     for letter in self.hidden_player):
-                print(f"Well done! You guessed the player {self.hidden_player}. And what a player ay!")
+                print(f"Well done! You guessed the player"
+                      f"{self.hidden_player}. And what a player ay!")
                 again()
                 break
 
         if self.incorrect_guesses == self.max_guesses:
             self.hangman_picture()
-            print(f"Ahh unlucky mate, you have run out of guesses!\nThe player I was thinking of was {self.hidden_player}. Better luck next time!")
+            print(f"Ahh unlucky mate, you have run out of guesses!"
+                  f"The player I was thinking of was {self.hidden_player}."
+                  f"Better luck next time!")
             again()
 
 

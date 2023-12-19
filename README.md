@@ -100,7 +100,6 @@ Please see the live site here: [Footballers Hangman](https://footballers-hangman
 
 This game was created using the Python Language.
 
-<br>
 
 ## 5. Testing:
 
@@ -109,7 +108,7 @@ This game was created using the Python Language.
 |Game Testing|Yes/No|
 |---|:---:|
 |Lets you know when correct and enters letter in the correct location within the word|✓|
-|Lets you know when incorrect and notifies you how many guesses remain✓|
+|Lets you know when incorrect and notifies you how many guesses remain|✓|
 |Hangman picture updates if wrong|✓|
 |If answer is not a letter or singular letter asks again for valid input|✓|
 |If guesses run out, game shows correct answer|✓|
@@ -123,17 +122,18 @@ This game was created using the Python Language.
 
 - Code was put through CI Python Linter with no issues reported.
 
+![Python Linter](./readme-images/python-linter.webp)
+
  <br>
 
 ### Bugs solved:
-
+- When running the game through the Python Linter I got a few warnings that the lines were too long. After some research I found that by splitting the string onto a new line and wrapping each line in "" this seemed to have solved the problem. I was advised by my research to enure that the 'f' was also included on each line to provide continuity.
 
 
 ### Unfixed Bugs:
 
+None identified.
 
-
- <br>
 
  ## 6 Deployment:
 
