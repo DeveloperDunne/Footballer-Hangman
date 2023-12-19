@@ -115,11 +115,11 @@ class hangmanGame:
         """
         Start of Footballers Hangman and allows user to start guessing letters.
         """
-
-        welcome = ("Welcome to Footballers Hangman!"
+        name = input("Hi there, whats your name?")
+        welcome = (f"Welcome to Footballers Hangman {name}!"
                    " \nEnter a letter and try to guess the footballer "
                    "before you run out of guesses!"
-                   " \nYou have 6 tries to guess the footballer,"
+                   " \nYou have 6 tries to guess the footballer, "
                    "do you think you can do it?")
 
         for char in welcome:
@@ -148,13 +148,13 @@ class hangmanGame:
             if all(letter in self.guessed_letters
                     for letter in self.hidden_player):
                 print(f"Well done! You guessed the player"
-                      f"{self.hidden_player}. And what a player ay!")
+                      f" {self.hidden_player}. And what a player ay!")
                 again()
                 break
 
         if self.incorrect_guesses == self.max_guesses:
             self.hangman_picture()
-            print(f"Ahh unlucky mate, you have run out of guesses!"
+            print(f"Ahh unlucky {name}, you have run out of guesses!"
                   f"The player I was thinking of was... {self.hidden_player}. "
                   f"Better luck next time!")
             again()
@@ -165,12 +165,11 @@ def again():
     if answer == 'y':
         main()
     elif answer == 'n':
-        print("No worries, thanks for playing!")
+        print(f"No worries, thanks for playing!")
         quit()
     else:
         print("Please enter Y or N")
         again()
-
 
 def main():
     welcomeScreen()
