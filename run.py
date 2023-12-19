@@ -117,8 +117,8 @@ class hangmanGame:
         """
 
         welcome = ("Welcome to Footballers Hangman!"
-                   " \nEnter a letter below and try to guess the footballer before you run out of guesses!"
-                   " \nYou have 6 tries to guess the footballer I'm thinking of, do you think you can do it?")
+                   " \nEnter a letter and try to guess the footballer before you run out of guesses!"
+                   " \nYou have 6 tries to guess the footballer, do you think you can do it?")
 
         for char in welcome:
             print(char, end='', flush=True)
@@ -139,7 +139,7 @@ class hangmanGame:
                 self.incorrect_guesses += 1
                 print(f"Unlucky thats not one of the letters!"
                       f"You have {self.max_guesses - self.incorrect_guesses} "
-                      f"guesses left!")
+                      f" guesses left!")
             else:
                 print("Thats correct!")
 
