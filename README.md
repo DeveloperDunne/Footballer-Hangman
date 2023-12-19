@@ -4,9 +4,9 @@ Welcome to Footballers Hangman!
 
 <br>
 
-Footballers hangman is a python terminal game which runs through Heroku and is based on the classic game, Hangman.
+Footballers Hangman is a Python terminal game which runs through Heroku and is based on the classic game, Hangman.
 
-Will you succeed in guessing before your guesses run out or will you be dangling from above.
+Will you succeed in guessing before your guesses run out or will you be dangling from above?
 
 ![Responsivness](./readme-images/responsive.webp)
 
@@ -40,11 +40,11 @@ Please see the live site here: [Footballers Hangman](https://footballers-hangman
 
 ### User stories /Goals:
 
-- As a user I would like to be able to play the game in the command line.
-- As a user I would like ot see when I guess correctly.
-- As a user I would like to see how many guesses I have left if I guess wrong.
-- As a user I would like to see the answer if I run out of guesses.
-- As a user I would like to be asked to play again at the end of the game.
+- As a user, I would like to be able to play the game in the command line.
+- As a user, I would like to see when I guess correctly.
+- As a user, I would like to see how many guesses I have left if I guess wrong.
+- As a user, I would like to see the answer if I run out of guesses.
+- As a user, I would like to be asked to play again at the end of the game.
 
 
 <br>
@@ -70,13 +70,13 @@ Please see the live site here: [Footballers Hangman](https://footballers-hangman
 
 ### The correct answer:
 
-- If correct you will be advised you are right and all blank spaces in which that letter is correct will fill in to give you a better idea of who the footballer may be. You will then be asked to choose another letter.
+- If correct you will be advised you are right and all blank spaces in which that letter is correct will be filled in to give you a better idea of who the footballer may be. You will then be asked to choose another letter.
 
 ![Correct answer](./readme-images/correct-answer.webp)
 
 ### The wrong answer:
 
-- However, if you enter a letter which is not one of the chosen footballer you will be told you are wrong and shown how many guesses you have left. 
+- However, if you enter a letter which is not one of the chosen footballers you will be told you are wrong and shown how many guesses you have left. 
 - The hangman picture will update with each wrong answer.
 - If you run out of guesses it will show you the correct answer and ask if you wish to play again.
 
@@ -84,7 +84,7 @@ Please see the live site here: [Footballers Hangman](https://footballers-hangman
 
 ### End of game:
 
-- If you guess all the correct letters before your guesses run out the game will congratualate you and ask if ou want to play again.
+- If you guess all the correct letters before your guesses run out the game will congratulate you and ask if you want to play again.
 
 ![End game](./readme-images/end-game.png)
 
@@ -107,12 +107,12 @@ This game was created using the Python Language.
 
 |Game Testing|Yes/No|
 |---|:---:|
-|Lets you know when correct and enters letter in the correct location within the word|✓|
+|Lets you know when correct and enter the letter in the correct location within the word|✓|
 |Lets you know when incorrect and notifies you how many guesses remain|✓|
 |Hangman picture updates if wrong|✓|
-|If answer is not a letter or singular letter asks again for valid input|✓|
-|If guesses run out, game shows correct answer|✓|
-|Asks you to play again when game is complete|✓|
+|If the answer is not a letter or singular letter asks again for valid input|✓|
+|If guesses run out, the game shows the correct answer|✓|
+|Asks you to play again when the game is complete|✓|
 ---
 
 ### 5. Testing programmes run:
@@ -127,7 +127,7 @@ This game was created using the Python Language.
  <br>
 
 ### Bugs solved:
-- When running the game through the Python Linter I got a few warnings that the lines were too long. After some research I found that by splitting the string onto a new line and wrapping each line in "" this seemed to have solved the problem. I was advised by my research to enure that the 'f' was also included on each line to provide continuity.
+- When running the game through the Python Linter I got a few warnings that the lines were too long. After some research, I found that splitting the string onto a new line and wrapping each line in "" seemed to have solved the problem. I was advised by my research to ensure that the 'f' was also included on each line to provide continuity.
 
 
 ### Unfixed Bugs:
@@ -141,34 +141,34 @@ None identified.
 
 * This site was deployed by completing the following steps:
 
-1. Log in to Heroku or create an account.
+1. Log in to Heroku or create an account.
 2. On the main page click Create New App.
 3. Select your region.
 4. Click on the Create App button
 5. The next page is the project’s Deploy Tab, click the Settings Tab.
-6. Next, scroll down to the Build pack section and click ‘Add Build pack’ select Python and click Save Changes
+6. Next, scroll down to the Build pack section click ‘Add Build pack’ select Python and click Save Changes
 7. Add Node.JS after adding Python. (Please be aware: Python must be above Node.JS in that order).
 8. Go to the Deploy tab.
 9. Select Github as your deployment method.
 10. Connect to GitHub.
 11. Search your repository name and connect.
-12. Click either Enable Automatic Deploys for automatic deployment when you push updates to GitHub or maunal to do this manually.
+12. Click either Enable Automatic Deploys for automatic deployment when you push updates to GitHub or manual to do this manually.
 
 ### Cloning:
 
 - Go to the repository on GitHub.
-- Click on the Code button and copy the https URL under Clone
+- Click on the Code button and copy the https URL under Clone
 - Open a terminal.
 - Go to the folder you want to store the cloned repository.
-- In the terminal type git clone and paste the URL of the cloned repository after it then press Enter.
+- In the terminal type git clone and paste the URL of the cloned repository after it then press Enter.
 - The site will then be cloned to that directory.
 
 <br>
 
 ## 8. Acknowledgements and Credits:
 
-- Some of the code layout concepts were used from Code Institutes ‘Love Sandwiches’ project.
-- The big Hangman design font on welcome screen was taken from a thread on Stack Overflow.
-- The layout of some code and how to make the hangman pictures were taken from Youtube.
-- I used method on how to make the text type itself out instead of just print from Stack overflow.   
+- Some of the code layout concepts were used from the Code Institutes ‘Love Sandwiches’ project.
+- The big Hangman design font on the welcome screen was taken from a thread on Stack Overflow.
+- The layout of some code and how to make the hangman pictures were taken from YouTube.
+- I used a method on how to make the text type itself out instead of just printing from Stack overflow.   
 - I would like to thank the Slack community and my mentor, Medale Oluwafemi for their guidance and support throughout the project.
