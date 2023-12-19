@@ -129,7 +129,7 @@ class hangmanGame:
             self.hangman_picture()
             guess = input("Please guess a letter:").lower()
             if len(guess) != 1 or not guess.isalpha():
-                print("Please enter a valid letter (A single lowercase leter)")
+                print("Please enter a valid letter (A single lowercase letter)")
                 continue
             if guess in self.guessed_letters:
                 print("You have already tried that letter, try another.")
