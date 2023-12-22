@@ -171,6 +171,7 @@ def again():
         print("Please enter Y or N")
         again()
 
+
 def main():
     welcomeScreen()
     play_the_game = hangmanGame()
