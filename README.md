@@ -44,7 +44,7 @@ Please see the live site here: [Footballers Hangman](https://footballers-hangman
 - As a user, I would like to see when I guess correctly.
 - As a user, I would like to see how many guesses I have left if I guess wrong.
 - As a user, I would like to see the answer if I run out of guesses.
-- As a user, I would like to be asked to play again at the end of the game.
+- As a user, I would like to be asked if I would like to play again at the end of the game.
 
 
 <br>
@@ -97,15 +97,22 @@ Please see the live site here: [Footballers Hangman](https://footballers-hangman
 
 ### Future Features:
 - I would have liked to have implemented an enter name function where your score could then be stored on a leaderboard at the end of the game but ran out of time.
+
 - I would have liked to make the game more colourful.
 
-## 4. Technologies Used:
+## 4. Technologies & Libraries Used:
 
 ### Languages:
 
-- Python
+- Python 3
 
 This game was created using the Python Language.
+
+- The imported Python word 'Random' was used to randomise the list of footballers that could be used so that a different one was chosen everytime the user plays.
+
+- the imported word 'Time' was used to show the text being typed out insted of printed.
+
+- Heroku was used for deployment to run the app.
 
 
 ## 5. Testing:
