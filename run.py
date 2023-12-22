@@ -2,7 +2,7 @@ import random
 import time
 
 
-def welcomeScreen():
+def welcome_screen():
 
     hangmanLogo = """
 
@@ -17,7 +17,7 @@ def welcomeScreen():
     print(hangmanLogo)
 
 
-class hangmanGame:
+class HangmanGame:
 
     def __init__(self):
         """
@@ -111,7 +111,7 @@ class hangmanGame:
             print("  |     / \\    ")
             print("*_| _*          ")
 
-    def playGame(self):
+    def play_game(self):
         """
         Start of Footballers Hangman and allows user to start guessing letters.
         """
@@ -173,9 +173,9 @@ def again():
 
 
 def main():
-    welcomeScreen()
-    play_the_game = hangmanGame()
-    play_the_game.playGame()
+    welcome_screen()
+    play_the_game = HangmanGame()
+    play_the_game.play_game()
 
 
 main()
