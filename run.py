@@ -33,7 +33,7 @@ class HangmanGame:
         self.guessed_letters = []
         self.incorrect_guesses = 0
         self.max_guesses = 6
-        self.playGame()
+        self.play_game()
 
     def chosen_player(self):
         """
@@ -149,7 +149,7 @@ class HangmanGame:
                     for letter in self.hidden_player):
                 print(f"Well done! You guessed the player"
                       f" {self.hidden_player}. And what a player ay!")
-                again()
+                play_again()
                 break
 
         if self.incorrect_guesses == self.max_guesses:
@@ -157,10 +157,10 @@ class HangmanGame:
             print(f"Ahh unlucky {name}, you have run out of guesses!"
                   f"The player I was thinking of was... {self.hidden_player}. "
                   f"Better luck next time!")
-            again()
+            play_again()
 
 
-def again():
+def play_again():
     answer = input(str("Do you want to play again? (y/n):"))
     if answer == 'y':
         main()
@@ -169,7 +169,7 @@ def again():
         quit()
     else:
         print("Please enter Y or N")
-        again()
+        play_again()
 
 
 def main():
